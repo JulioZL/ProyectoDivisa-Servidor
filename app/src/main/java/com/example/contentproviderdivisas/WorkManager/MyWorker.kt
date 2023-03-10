@@ -40,7 +40,7 @@ class MyWorker(context: Context, workerParams: WorkerParameters) : Worker(contex
 
                 val applicationScope = CoroutineScope(SupervisorJob())
                 var moneda = Divisa(
-                    id = 0,
+                    _id = 0,
                     baseCode = "",
                     nombreDivisa = "",
                     valor = 0.0,

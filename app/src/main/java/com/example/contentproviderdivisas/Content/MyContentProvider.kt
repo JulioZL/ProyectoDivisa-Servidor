@@ -11,11 +11,11 @@ import com.example.contentproviderdivisas.Repository.Myapplication
 
 private val sUriMatcher = UriMatcher(UriMatcher.NO_MATCH).apply {
 
-    addURI("com.example.contentproviderdivisas", "monedas", 1)
+    addURI("com.example.contentproviderdivisas", "divisas", 1)
 
-    addURI("com.example.contentproviderdivisas", "monedas/#", 2)
+    addURI("com.example.contentproviderdivisas", "divisas/#", 2)
 
-    addURI("com.example.contentproviderdivisas", "monedas/*", 3)
+    addURI("com.example.contentproviderdivisas", "divisas/*", 3)
 }
 
 class MyContentProvider : ContentProvider() {
