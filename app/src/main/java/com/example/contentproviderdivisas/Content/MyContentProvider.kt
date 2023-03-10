@@ -40,19 +40,13 @@ class MyContentProvider : ContentProvider() {
         var cursor: Cursor? = null
 
         when( sUriMatcher.match(p0)){
-            //"content://com.example.proyectodivisa/monedas"
-            //query / insert
             1 -> {
                 cursor = db.divisaDao().getAllCursor()
 
             }
-            //"content://com.example.proyectodivisa/monedas/*"
-            //query
             2 -> {
 
             }
-            //"content://com.example.proyectodivisa/monedas/#"
-            //query / update  /  delete
             3 -> {
 
             }

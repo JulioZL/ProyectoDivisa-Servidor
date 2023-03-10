@@ -25,6 +25,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         val db = Room.databaseBuilder(
             applicationContext, DivisaDatabase::class.java, "moneda"
         ).build()
@@ -35,6 +36,7 @@ class MainActivity : AppCompatActivity() {
         val constraints = Constraints.Builder()
             .setRequiredNetworkType(NetworkType.CONNECTED)
             .build()
+
         val actualizacionDivisasWork = PeriodicWorkRequestBuilder<MyWorker>(
             15, TimeUnit.MINUTES
         ).setConstraints(constraints).build()
