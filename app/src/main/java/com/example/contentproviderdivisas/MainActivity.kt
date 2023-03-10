@@ -36,11 +36,11 @@ class MainActivity : AppCompatActivity() {
             .setRequiredNetworkType(NetworkType.CONNECTED)
             .build()
         val actualizacionDivisasWork = PeriodicWorkRequestBuilder<MyWorker>(
-            10, TimeUnit.MINUTES
+            15, TimeUnit.MINUTES
         ).setConstraints(constraints).build()
 
         WorkManager.getInstance(this).enqueueUniquePeriodicWork(
-            "ActualizacionDivisasWork",
+            "MyWorker",
             ExistingPeriodicWorkPolicy.KEEP,
             actualizacionDivisasWork
         )
@@ -64,4 +64,5 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
 }
